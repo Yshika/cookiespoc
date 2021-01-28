@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AnalyticsHeading from "../components";
 // import Cookie from "js-cookie";
-import parseCookies from '../pages/helpers';
+import parseCookies from '../helpers';
 
 const Index = ({ cookies}) => {
   //console.log("cookies", cookies);
