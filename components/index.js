@@ -6,7 +6,7 @@ const AnalyticsHeading = ({ heading, subTitle, cookies }) => {
   let user = "";
   const countRef = useRef(0);
   const [waiting, setWaiting] = useState(false);
-  console.log("Cookies are:::::", cookies);
+  //console.log("Cookies are:::::", cookies);
   const { lobName, userValue } = cookies || {};
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const AnalyticsHeading = ({ heading, subTitle, cookies }) => {
     // }, 5000);
 
     if (window) {
-      console.log("pathname user", window.location.pathname);
+      //console.log("pathname user", window.location.pathname);
       if (window.location.pathname === "/travel-insurance") {
         lob = "travel";
       } else if (window.location.pathname === "/motor-insurance") {
@@ -29,7 +29,7 @@ const AnalyticsHeading = ({ heading, subTitle, cookies }) => {
         lob = "other";
       }
     }
-    console.log("user lob", lob);
+    //console.log("user lob", lob);
 
     const intervalId = setInterval(() => {
       if (countRef.current === 2) {
@@ -46,12 +46,12 @@ const AnalyticsHeading = ({ heading, subTitle, cookies }) => {
     if (lobName && userValue && lobName === lob) {
       user = "returning";
       document.cookie = `userValue=returning; path=/`;
-      console.log("user", user);
+      //console.log("user", user);
     } else {
       user = "new";
       document.cookie = `userValue=new; path=/`;
       document.cookie = `lobName=${lob}; path=/`;
-      console.log("user", user);
+      //console.log("user", user);
     }
   }, [lobName, userValue]);
 
