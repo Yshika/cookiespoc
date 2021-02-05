@@ -4,7 +4,7 @@ import AnalyticsHeading from "../components";
 import parseCookies from '../helpers';
 
 const Index = ({ cookies}) => {
-  //console.log("cookies", cookies);
+  console.log("cookies", cookies);
   // const [rememberMe, setRememberMe] = useState(() =>
   //   initialRememberValue
   // );
